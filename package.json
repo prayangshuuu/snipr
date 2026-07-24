@@ -1,15 +1,17 @@
 {
   "name": "snipr",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A minimal, anonymous URL shortener",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
-  "keywords": [],
+  "keywords": ["url-shortener", "fastify"],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
     "@fastify/rate-limit": "^11.1.0",
     "@fastify/static": "^10.1.2",
