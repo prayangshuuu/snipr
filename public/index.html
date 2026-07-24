@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>snipr — URL Shortener</title>
-  <meta name="description" content="snipr is a minimal, anonymous URL shortener. Shorten links instantly — no signup required." />
+  <title>snipr — 100% Free & Private URL Shortener</title>
+  <meta name="description" content="100% Free & Private URL Shortener. Custom Aliases, Zero ads, No Account Needed, Link Never Expired." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>snipr</h1>
-      <p class="tagline">Shorten any link. No signup. No tracking.</p>
+      <h1 class="logo">snipr.</h1>
+      <h2 class="subhead">100% Free & Private</h2>
+      <p class="features">Custom Aliases • Zero ads • No Account Needed<br>Link Never Expired • Link Tracking Using Track ID</p>
+      <p class="privacy">We only count clicks. No personal data collected, ever.</p>
     </header>
 
     <!-- Bento grid -->
@@ -19,12 +24,12 @@
 
       <!-- Large cell: Shorten form -->
       <div class="card card-shorten">
-        <h2>Shorten a URL</h2>
+        <h3>Create a short link</h3>
         <form id="shorten-form" autocomplete="off">
           <input
             type="url"
             id="url-input"
-            placeholder="https://example.com/very/long/url"
+            placeholder="Paste your long URL here..."
             required
           />
           <input
@@ -40,7 +45,7 @@
 
       <!-- Result cell: appears after shortening -->
       <div class="card card-result" id="result-card" hidden>
-        <h2>Your short link</h2>
+        <h3>Your short link</h3>
         <div class="result-row">
           <input type="text" id="short-url" readonly />
           <button id="copy-btn" type="button">Copy</button>
@@ -50,19 +55,19 @@
 
       <!-- Small cell: total links -->
       <div class="card card-count">
-        <span class="card-label">Links created</span>
+        <span class="card-label">Total Links Generated</span>
         <span class="card-value" id="total-count">—</span>
       </div>
 
       <!-- Small cell: stats lookup -->
       <div class="card card-stats">
-        <h2>Look up stats</h2>
+        <h3>Track ID / Stats</h3>
         <div class="stats-row">
-          <input type="text" id="stats-input" placeholder="Paste a code" />
-          <button id="stats-btn" type="button">Look up</button>
+          <input type="text" id="stats-input" placeholder="Paste alias or code" />
+          <button id="stats-btn" type="button">Track</button>
         </div>
         <div id="stats-result" hidden>
-          <p>Clicks: <strong id="stats-clicks">0</strong></p>
+          <p>Total Clicks: <strong id="stats-clicks">0</strong></p>
           <p class="muted" id="stats-url"></p>
         </div>
         <p id="stats-error" class="error" hidden></p>
